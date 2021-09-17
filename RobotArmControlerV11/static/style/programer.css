@@ -1,0 +1,43 @@
+body{
+    /* background-color:dodgerblue; */
+    color: antiquewhite;
+    background-color:rgb(58, 58, 173);   
+  }
+.CodeMirror {
+font-size: 25px;
+}
+.bt {
+  max-height: 170px;
+  max-width: 210px;
+  height: 17vw;
+  width: 21vw;
+  /* position:relative; */
+  /* overflow: auto; */
+}
+.container{
+font-size: 30px;
+color: white;
+}
+
+.header{
+  /* border: 3px solid green; */
+  color: white;
+
+  /* max-block-size: 50px;  */
+  /* font-size: 4vw; */
+  font-size: 40px;
+  /* font-weight: 120; */
+  /* margin-top:1vh; */
+  text-align: center;
+  overflow: auto;
+}
+.bottom{
+  /* border: 3px solid green; */
+  position: fixed;
+  color: white;
+  font-size:1.2em; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}

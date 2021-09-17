@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style/w3.css">
+<link rel="icon" href="/static/image/robot.png">
+<style>
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+body{
+    background-color: aquamarine;
+}
+span {
+  background-color: lightskyblue;
+  width:350px;
+  height:360px;
+}
+button {
+font-size: 40px;
+padding: 20px 20px 20px 20px;
+border-width: 10px;
+border-color: blue;
+background-color: aqua;
+}
+</style>
+</head>
+<body>
+<h1><a class ="w3-bar-item w3-left" href="/" >Robot Controler Support Programing tool</a></h1>
+<br><br><br>
+<p>LastPosition <input style= "width: 500px;" value="" id="P1">
+    <input type="button" onclick = "reset()" value="reset"></p>
+<p>NowPosition <input style= "width: 500px;" value="" id="P2"></p>
+<h4>position(x,y,z,a,b)</h4><br><br>
+<span style="float:left; text-align: center;" class="noselect">
+<button ontouchstart="up()" onmousedown = "up()" onmouseup="cl()" ontouchcancel ="cl()">UP</button>
+<button ontouchstart="ru()" onmousedown = "ru()" onmouseup="cl()" ontouchcancel="cl()" style="margin-left:40px;">RU</button><br>
+<button ontouchstart="cw()" onmousedown = "cw()" onmouseup="cl()" ontouchcancel="cl()" >CW</button>
+<button ontouchstart="cc()" onmousedown = "cc()" onmouseup="cl()" ontouchcancel="cl()" style="margin-left:100px;">CC</button><br>
+<button ontouchstart="dw()" onmousedown = "dw()" onmouseup="cl()" ontouchcancel="cl()" >DW</button>
+<button ontouchstart="rd()" onmousedown = "rd()" onmouseup="cl()" ontouchcancel="cl()" style="margin-left:40px;">RD</button>
+</span>
+
+<span style="float:right; text-align: center;" class="noselect">
+<button ontouchstart="fw()" onmousedown = "fw()" onmouseup="cl()" ontouchcancel ="cl()">FW</button><br>
+<button ontouchstart="lt()" onmousedown = "lt()" onmouseup="cl()" ontouchcancel ="cl()">LT</button>
+<button ontouchstart="rt()" onmousedown = "rt()" onmouseup="cl()" ontouchcancel ="cl()"style="margin-left:120px;">RT</button><br>
+<button ontouchstart="bk()" onmousedown = "bk()" onmouseup="cl()" ontouchcancel ="cl()">BK</button>
+
+<script src="/static/script/prgrsp.js"></script>
+
+</span>
+<div class="w3-red w3-bottom bottom">
+  <div class="w3-left">Made by HS: Nguyễn Đỗ Quốc Anh - GVHD: ThS Nguyễn Văn Hoành - THPT Pleiku - Gia Lai</div>
+  <div class="w3-right">V10 </div>
+</div>
+</body>
+</html>
+

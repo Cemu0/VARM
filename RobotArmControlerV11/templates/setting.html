@@ -1,0 +1,84 @@
+<!doctype html>
+<html>  
+<head>
+    <meta charset="utf-8"/>
+    <!-- <link rel="icon" href="https://png.icons8.com/metro/50/000000/robot.png"> -->
+    <link rel="icon" href="/static/image/robot.png">
+    <title>RobotArmController</title>
+    <link rel="stylesheet" type="text/css" href="/static/style/pagestyle.css">
+    <link rel="stylesheet" href="/static/style/w3.css">
+    <link rel="stylesheet" href="/static/style/programer.css">
+</head>
+<body>
+<button class = "w3-button w3-right w3-red w3-round-large " style = "top: 0px;right: 0px; position: fixed;"type="button" onclick="STOP()">STOP!</button>
+<nav class="w3-bar w3-blue" style=" width:100%; height:44px;">
+        <a class ="w3-bar-item w3-left" href="/" >Robot Arm Controller</a>
+</nav>
+<h5>SETTING</h5>
+<st></st>
+
+<br/>
+<button type="button" onclick="RESUME()">RESUME</button>
+<button type="button" onclick="GoZero()">GoZero</button>
+<button type="button" onclick="SetZero()">SetZero</button>
+<!-- <button type="button" onclick="SetAlltoZero()">SetAlltoZero</button> -->
+
+<br/>AXIS SET(auto set)
+<form>
+    <div>
+    A1: <input type="number"  min="-10000" max="10000" id="A1" value="0">
+    A2: <input type="number"  min="-10000" max="10000" id="A2" value="0">
+    A3: <input type="number"  min="-10000" max="10000" id="A3" value="0">
+    A4: <input type="number"  min="-10000" max="10000" id="A4" value="0">
+    </div>
+<div>
+    A5: <input type="number"  min="-10000" max="10000" id="A5" value="0">
+    HAND: <input type="number"  min="-255" max="255" id="A6" value="0">
+    alpha: <input type="number"  min="-10000" max="10000" id="A7" value="0">
+    beta: <input type="number"  min="-10000" max="10000" id="A8" value="0">
+</div>
+</form>
+ZeroPoint
+<br/>
+GoDirectA1: <input type="number"  min="-255" max="255" id="GDA1" value="-150"> 
+<button type="button" onclick="Go('A1')">go</button>
+GoDirectA2: <input type="number"  min="-255" max="255" id="GDA2" value="160">
+<button type="button" onclick="Go('A2')">go</button>
+GoDirectA3: <input type="number"  min="-255" max="255" id="GDA3" value="-140">
+<button type="button" onclick="Go('A3')">go</button>
+<button type="button" onclick="AUTOSETZERO()" id="AUTOSETZERO">AUTOSETZERO</button>
+<br/>
+PID:<br/>
+A1 P:<input type="number" id="P1" value="7">
+   I:<input type="number" id="I1" value="0">
+   D:<input type="number" id="D1" value="1">
+   <button type="button" onclick="SetPID(1)">OK</button><br/> 
+A2 P:<input type="number" id="P2" value="7">
+   I:<input type="number" id="I2" value="0">
+   D:<input type="number" id="D2" value="1">
+   <button type="button" onclick="SetPID(2)">OK</button><br/> 
+A3 P:<input type="number" id="P3" value="7">
+   I:<input type="number" id="I3" value="0">
+   D:<input type="number" id="D3" value="1">
+   <button type="button" onclick="SetPID(3)">OK</button><br/> 
+A4 P:<input type="number" id="P4" value="7">
+   I:<input type="number" id="I4" value="0">
+   D:<input type="number" id="D4" value="1">
+   <button type="button" onclick="SetPID(4)">OK</button><br/> 
+A5 P:<input type="number" id="P5" value="7">
+   I:<input type="number" id="I5" value="0">
+   D:<input type="number" id="D5" value="1">
+   <button type="button" onclick="SetPID(5)">OK</button><br/> 
+CUSTOM:
+<form>
+SendToMega1:<input type="text" id="M1" value=""><br/>
+SendToMega2:<input type="text" id="M2" value=""><br/>
+<button type="button" onclick="SendToMega()">set</button>
+</form>
+<script src="/static/script/setting.js"></script>  
+<div class="w3-red w3-bottom bottom">
+    <div class="w3-left">Made by HS: Nguyễn Đỗ Quốc Anh - GVHD: ThS Nguyễn Văn Hoành - THPT Pleiku - Gia Lai</div>
+    <div class="w3-right">V10 </div>
+</div>
+</body>
+</html>

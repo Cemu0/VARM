@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<!-- Create a simple CodeMirror instance -->
+<link rel="stylesheet" href="/static/lib/codemirror.css">
+<link rel="stylesheet" href="/static/style/theme/cobalt.css">
+<link rel="stylesheet" href="/static/style/w3.css">
+<link rel="icon" href="/static/image/robot.png">
+<script src="/static/lib/codemirror.js"></script>
+<script src="/static/mode/python/python.js"></script>
+<script src="/static/addon/search/jump-to-line.js"></script>
+<!-- <script src="/static/script/NoSleep.min.js"></script> -->
+<link rel="stylesheet" href="/static/style/programer.css">
+</head>
+<body>
+
+  <div class="header">
+    <button id = "cbutton" onclick="run()" style="float: left" class="bt w3-button w3-green w3-round-large">RUN</button>
+    <!-- <button onclick="run()" class="bt w3-button w3-green w3-hover-light-green w3-round-large">RUN</button> -->
+    <button onclick="stop()" style="float: right" class="bt w3-button w3-red w3-hover w3-round-large">STOP</button>
+    <div>    
+    <div style="height:100%; margin:auto;">ROBOT ARM CONTROLER</div> 
+    <!-- mind error here -->
+    <br/>
+    <a style = "float: left;" href="/setting">Setting</a>
+    <a style = "float: right;" href="/prgrsp">PrgrTool</a>
+    </div>
+  </div>
+
+  <div class = "container">
+    <span style = "float: left;">Program:</span>
+    <select onchange="read()" id="ProgramList"></select>
+    <button class = "w3-light-blue w3-hover w3-round-large" onclick = "save()">save</button>
+    <!-- <input style="float: right" type="button" id="toggle" value="Awake on"/> -->
+  </div>
+  <div id="CodeEditor"></div>
+<script src="/static/script/programer.js"></script>
+  <div class="w3-red w3-bottom bottom">
+      <div class="w3-left">Made by HS: Nguyễn Đỗ Quốc Anh - GVHD: ThS Nguyễn Văn Hoành - THPT Pleiku - Gia Lai</div>
+      <div class="w3-right">V10 </div>
+  </div>
+
+</body>
+</html>
